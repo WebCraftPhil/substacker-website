@@ -32,12 +32,6 @@ function App() {
     ref.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const today = new Date().toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric'
-  });
-
   return (
     <div className="min-h-screen bg-[#F6F7F9]">
       {/* Navigation */}
@@ -262,46 +256,54 @@ function App() {
             </h2>
 
             <p className="text-sm text-[#9CA3AF] mb-8">
-              Last updated: {today}
+              Last updated: February 7, 2026
             </p>
 
             <div className="space-y-8 text-[#374151]">
               <p className="text-base leading-relaxed">
-                SubStacker is a subscription tracking app.
+                SubStacker is a subscription tracking application designed to help users manage and understand their recurring subscriptions.
               </p>
 
+              {/* Information We Collect */}
               <div className="space-y-4">
+                <h3 className="text-xl font-bold text-[#111214]">
+                  Information We Collect
+                </h3>
                 <p className="text-base leading-relaxed">
-                  We collect only the information necessary to operate the app:
+                  We collect only the information necessary to operate and improve the app:
                 </p>
-                <ul className="space-y-2 ml-4">
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#4F6DF5] mt-1.5">•</span>
-                    <span>Account login details (such as email) if you create an account</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#4F6DF5] mt-1.5">•</span>
-                    <span>Subscription data you enter</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-[#4F6DF5] mt-1.5">•</span>
-                    <span>Basic usage data to improve app performance</span>
-                  </li>
-                </ul>
+                
+                <div className="space-y-4">
+                  <div>
+                    <h4 className="font-semibold text-[#111214] mb-2">Account information</h4>
+                    <p className="text-base leading-relaxed">
+                      If you create an account, we may collect basic login details such as your email address.
+                    </p>
+                  </div>
+                  
+                  <div>
+                    <h4 className="font-semibold text-[#111214] mb-2">User-provided subscription data</h4>
+                    <p className="text-base leading-relaxed">
+                      Subscription names, amounts, billing dates, and notes that you choose to enter into the app.
+                    </p>
+                  </div>
+                  
+                  <div>
+                    <h4 className="font-semibold text-[#111214] mb-2">Usage and diagnostics data</h4>
+                    <p className="text-base leading-relaxed">
+                      Aggregated usage data and crash reports collected through Apple App Analytics to help us understand app performance, stability, and feature usage.
+                    </p>
+                  </div>
+                </div>
               </div>
 
-              <div className="space-y-2">
-                <p className="text-base leading-relaxed">
-                  We do not sell personal data.
-                </p>
-                <p className="text-base leading-relaxed">
-                  We do not share personal data with third parties except for required service providers that support app functionality.
-                </p>
-              </div>
-
+              {/* How We Use Your Information */}
               <div className="space-y-4">
+                <h3 className="text-xl font-bold text-[#111214]">
+                  How We Use Your Information
+                </h3>
                 <p className="text-base leading-relaxed">
-                  Data is used only to:
+                  Your data is used only to:
                 </p>
                 <ul className="space-y-2 ml-4">
                   <li className="flex items-start gap-2">
@@ -310,28 +312,95 @@ function App() {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#4F6DF5] mt-1.5">•</span>
-                    <span>Save user preferences</span>
+                    <span>Save user preferences and settings</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#4F6DF5] mt-1.5">•</span>
-                    <span>Improve app reliability</span>
+                    <span>Improve app reliability, performance, and user experience</span>
                   </li>
                 </ul>
+                <p className="text-base leading-relaxed font-semibold">
+                  We do not sell your personal data.
+                </p>
               </div>
 
+              {/* Analytics */}
+              <div className="space-y-4">
+                <h3 className="text-xl font-bold text-[#111214]">
+                  Analytics
+                </h3>
+                <p className="text-base leading-relaxed">
+                  SubStacker uses Apple App Analytics, a privacy-focused analytics service provided by Apple. This data is aggregated and does not identify individual users.
+                </p>
+                <p className="text-base leading-relaxed">
+                  We do not use third-party advertising trackers.
+                </p>
+              </div>
+
+              {/* Data Sharing */}
+              <div className="space-y-4">
+                <h3 className="text-xl font-bold text-[#111214]">
+                  Data Sharing
+                </h3>
+                <p className="text-base leading-relaxed">
+                  We do not share personal data with third parties except for trusted service providers required to operate the app (such as hosting or authentication services). These providers are only permitted to use data as necessary to support app functionality.
+                </p>
+              </div>
+
+              {/* Data Retention */}
+              <div className="space-y-4">
+                <h3 className="text-xl font-bold text-[#111214]">
+                  Data Retention
+                </h3>
+                <p className="text-base leading-relaxed">
+                  We retain your data only for as long as your account is active or as needed to provide the app's features. If you delete your account or request deletion, your data will be removed within a reasonable timeframe.
+                </p>
+              </div>
+
+              {/* Your Choices and Data Deletion */}
+              <div className="space-y-4">
+                <h3 className="text-xl font-bold text-[#111214]">
+                  Your Choices and Data Deletion
+                </h3>
+                <p className="text-base leading-relaxed">
+                  You may request access to or deletion of your data at any time by contacting us at the email address below.
+                </p>
+              </div>
+
+              {/* Security */}
+              <div className="space-y-4">
+                <h3 className="text-xl font-bold text-[#111214]">
+                  Security
+                </h3>
+                <p className="text-base leading-relaxed">
+                  We take reasonable measures to protect your information. However, no method of electronic storage or transmission is completely secure, and we cannot guarantee absolute security.
+                </p>
+              </div>
+
+              {/* Changes to This Policy */}
+              <div className="space-y-4">
+                <h3 className="text-xl font-bold text-[#111214]">
+                  Changes to This Policy
+                </h3>
+                <p className="text-base leading-relaxed">
+                  We may update this privacy policy from time to time. Any changes will be reflected by an updated "Last updated" date.
+                </p>
+              </div>
+
+              {/* Contact */}
               <div className="p-6 bg-[#F6F7F9] rounded-2xl">
-                <h3 className="text-sm font-semibold text-[#6B7280] uppercase tracking-wider mb-4">
+                <h3 className="text-xl font-bold text-[#111214] mb-4">
                   Contact
                 </h3>
-                <p className="text-base leading-relaxed mb-2">
-                  If you have questions about this policy, contact:
+                <p className="text-base leading-relaxed mb-4">
+                  If you have questions about this privacy policy or your data, you can contact us at:
                 </p>
                 <a 
                   href="mailto:vtguy65@icloud.net"
                   className="inline-flex items-center font-medium text-[#4F6DF5] hover:text-[#3D5BD9] transition-colors"
                 >
                   <Mail className="w-4 h-4 mr-2" />
-                  vtguy65@icloud.net
+                  Email: vtguy65@icloud.net
                 </a>
               </div>
             </div>
