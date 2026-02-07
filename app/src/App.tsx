@@ -181,98 +181,13 @@ function App() {
             {/* Right Content - Phone Mockup */}
             <div className="relative flex justify-center lg:justify-end">
               <div className="relative w-[280px] sm:w-[320px] lg:w-[380px]">
-                {/* Phone Frame */}
-                <div className="relative bg-white rounded-[40px] p-3 shadow-[0_28px_70px_rgba(0,0,0,0.14)]">
-                  {/* Screen */}
-                  <div className="relative bg-[#F8F9FB] rounded-[32px] overflow-hidden aspect-[9/19]">
-                    {/* App UI */}
-                    <div className="absolute inset-0 flex flex-col">
-                      {/* Status Bar */}
-                      <div className="h-8 bg-white flex items-center justify-between px-6">
-                        <span className="text-xs font-semibold text-[#111214]">9:41</span>
-                        <div className="flex items-center gap-1">
-                          <div className="w-4 h-2.5 bg-[#111214] rounded-sm"></div>
-                        </div>
-                      </div>
-                      
-                      {/* App Header */}
-                      <div className="px-5 py-4 bg-white">
-                        <div className="flex items-center justify-between">
-                          <div>
-                            <p className="text-xs text-[#6B7280]">Total Monthly</p>
-                            <p className="text-2xl font-bold text-[#111214]">$127.43</p>
-                          </div>
-                          <div className="w-10 h-10 bg-[#4F6DF5] rounded-full flex items-center justify-center">
-                            <span className="text-white text-lg font-bold">S</span>
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Subscription List */}
-                      <div className="flex-1 px-4 py-3 space-y-3 overflow-hidden">
-                        {/* Card 1 */}
-                        <div className="bg-white rounded-2xl p-4 shadow-sm">
-                          <div className="flex items-center gap-3">
-                            <div className="w-10 h-10 bg-[#E8F5E9] rounded-xl flex items-center justify-center">
-                              <span className="text-green-600 text-lg font-bold">N</span>
-                            </div>
-                            <div className="flex-1">
-                              <p className="font-semibold text-[#111214] text-sm">Netflix</p>
-                              <p className="text-xs text-[#6B7280]">Monthly • 15th</p>
-                            </div>
-                            <p className="font-semibold text-[#111214] text-sm">$15.49</p>
-                          </div>
-                        </div>
-
-                        {/* Card 2 */}
-                        <div className="bg-white rounded-2xl p-4 shadow-sm">
-                          <div className="flex items-center gap-3">
-                            <div className="w-10 h-10 bg-[#E3F2FD] rounded-xl flex items-center justify-center">
-                              <span className="text-blue-600 text-lg font-bold">S</span>
-                            </div>
-                            <div className="flex-1">
-                              <p className="font-semibold text-[#111214] text-sm">Spotify</p>
-                              <p className="text-xs text-[#6B7280]">Monthly • 22nd</p>
-                            </div>
-                            <p className="font-semibold text-[#111214] text-sm">$10.99</p>
-                          </div>
-                        </div>
-
-                        {/* Card 3 */}
-                        <div className="bg-white rounded-2xl p-4 shadow-sm">
-                          <div className="flex items-center gap-3">
-                            <div className="w-10 h-10 bg-[#FFF3E0] rounded-xl flex items-center justify-center">
-                              <span className="text-orange-600 text-lg font-bold">A</span>
-                            </div>
-                            <div className="flex-1">
-                              <p className="font-semibold text-[#111214] text-sm">Apple Music</p>
-                              <p className="text-xs text-[#6B7280]">Monthly • 5th</p>
-                            </div>
-                            <p className="font-semibold text-[#111214] text-sm">$10.99</p>
-                          </div>
-                        </div>
-
-                        {/* Card 4 */}
-                        <div className="bg-white rounded-2xl p-4 shadow-sm">
-                          <div className="flex items-center gap-3">
-                            <div className="w-10 h-10 bg-[#F3E5F5] rounded-xl flex items-center justify-center">
-                              <span className="text-purple-600 text-lg font-bold">Y</span>
-                            </div>
-                            <div className="flex-1">
-                              <p className="font-semibold text-[#111214] text-sm">YouTube Premium</p>
-                              <p className="text-xs text-[#6B7280]">Monthly • 12th</p>
-                            </div>
-                            <p className="font-semibold text-[#111214] text-sm">$13.99</p>
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Bottom Indicator */}
-                      <div className="h-1 w-32 bg-[#111214]/20 rounded-full mx-auto mb-2"></div>
-                    </div>
-                  </div>
-                </div>
-
+                {/* Real App Screenshot */}
+                <img 
+                  src="/main-pic-1.PNG" 
+                  alt="SubStacker app interface showing subscription management" 
+                  className="w-full h-auto rounded-[40px] shadow-[0_28px_70px_rgba(0,0,0,0.14)]"
+                />
+                
                 {/* Floating Badge */}
                 <div className="absolute -top-2 -right-2 bg-[#B9F6D4] text-[#111214] text-xs font-semibold px-3 py-1.5 rounded-full shadow-lg">
                   Simple
