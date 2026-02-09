@@ -114,19 +114,10 @@ function App() {
             <div className="space-y-8">
               <div className="space-y-4">
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#111214] leading-[1.1]">
-                  SubStacker
+                  Stop paying for subscriptions you forgot you had.
                 </h1>
                 <p className="text-xl sm:text-2xl text-[#6B7280] font-medium">
-                  Subscription management made simple
-                </p>
-              </div>
-
-              <div className="space-y-6">
-                <p className="text-base lg:text-lg text-[#374151] leading-relaxed max-w-lg">
-                  SubStacker helps you stay on top of your recurring subscriptions so you can avoid surprise renewals and keep your spending organized.
-                </p>
-                <p className="text-base lg:text-lg text-[#374151] leading-relaxed max-w-lg">
-                  View all your subscriptions in one place, track billing cycles, and get reminders before renewals. SubStacker is designed to be simple, privacy-focused, and easy to use.
+                  SubStacker helps you track subscriptions, avoid surprise charges, and stay organized.
                 </p>
               </div>
 
@@ -136,45 +127,73 @@ function App() {
                   <div className="flex-shrink-0 w-5 h-5 mt-0.5 rounded-full bg-[#B9F6D4] flex items-center justify-center">
                     <Check className="w-3 h-3 text-[#111214]" />
                   </div>
-                  <span className="text-[#374151]">View your subscriptions in one place</span>
+                  <span className="text-[#374151]">View all subscriptions in one place</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="flex-shrink-0 w-5 h-5 mt-0.5 rounded-full bg-[#B9F6D4] flex items-center justify-center">
                     <Check className="w-3 h-3 text-[#111214]" />
                   </div>
-                  <span className="text-[#374151]">Track billing cycles and renewal dates</span>
+                  <span className="text-[#374151]">See renewal dates and billing cycles instantly</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="flex-shrink-0 w-5 h-5 mt-0.5 rounded-full bg-[#B9F6D4] flex items-center justify-center">
                     <Check className="w-3 h-3 text-[#111214]" />
                   </div>
-                  <span className="text-[#374151]">Stay informed before subscriptions renew</span>
+                  <span className="text-[#374151]">Get reminders before you are charged</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="flex-shrink-0 w-5 h-5 mt-0.5 rounded-full bg-[#B9F6D4] flex items-center justify-center">
                     <Check className="w-3 h-3 text-[#111214]" />
                   </div>
-                  <span className="text-[#374151]">Simple, distraction-free design</span>
+                  <span className="text-[#374151]">Private by design</span>
                 </div>
               </div>
 
-              {/* Disclaimer */}
-              <p className="text-sm text-[#9CA3AF] max-w-md">
-                SubStacker does not process payments or cancel subscriptions automatically. It provides visibility and guidance so users can make informed decisions.
+              {/* How It Works */}
+              <div className="space-y-4 pt-4">
+                <h3 className="text-lg font-semibold text-[#111214]">How It Works</h3>
+                <div className="space-y-3">
+                  <div className="flex items-start gap-3">
+                    <div className="flex-shrink-0 w-5 h-5 mt-0.5 rounded-full bg-[#4F6DF5]/10 flex items-center justify-center">
+                      <span className="text-xs font-semibold text-[#4F6DF5]">1</span>
+                    </div>
+                    <span className="text-[#374151]">Add your subscriptions manually</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="flex-shrink-0 w-5 h-5 mt-0.5 rounded-full bg-[#4F6DF5]/10 flex items-center justify-center">
+                      <span className="text-xs font-semibold text-[#4F6DF5]">2</span>
+                    </div>
+                    <span className="text-[#374151]">See monthly and yearly totals</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="flex-shrink-0 w-5 h-5 mt-0.5 rounded-full bg-[#4F6DF5]/10 flex items-center justify-center">
+                      <span className="text-xs font-semibold text-[#4F6DF5]">3</span>
+                    </div>
+                    <span className="text-[#374151]">Get notified before renewals</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Trust Clarification */}
+              <p className="text-sm text-[#6B7280]">
+                SubStacker does not connect to your bank accounts.
               </p>
 
               {/* CTA */}
               <div className="flex flex-wrap items-center gap-4">
-                <a
-                  href="#"
-                  onClick={(e) => e.preventDefault()}
-                  className="inline-flex items-center px-6 py-3 text-base font-medium text-white bg-[#4F6DF5] rounded-full hover:bg-[#3D5BD9] transition-colors shadow-lg shadow-[#4F6DF5]/20"
-                >
-                  <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
-                  </svg>
-                  Available on the App Store
-                </a>
+                <div className="space-y-1">
+                  <a
+                    href="#"
+                    onClick={(e) => e.preventDefault()}
+                    className="inline-flex items-center px-6 py-3 text-base font-medium text-white bg-[#4F6DF5] rounded-full hover:bg-[#3D5BD9] transition-colors shadow-lg shadow-[#4F6DF5]/20"
+                  >
+                    <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                    </svg>
+                    Available on the App Store
+                  </a>
+                  <p className="text-xs text-[#6B7280] pl-1">Available on iOS.</p>
+                </div>
                 <button
                   onClick={() => scrollToSection(supportRef)}
                   className="inline-flex items-center text-sm font-medium text-[#6B7280] hover:text-[#111214] transition-colors"
