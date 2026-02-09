@@ -1,11 +1,12 @@
 import { useEffect, useState, useRef } from 'react';
-import { Mail, Shield, Check, ChevronRight } from 'lucide-react';
+import { Mail, Shield, Check, ChevronRight, HelpCircle } from 'lucide-react';
 
 function App() {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
   const homeRef = useRef<HTMLElement>(null);
   const supportRef = useRef<HTMLElement>(null);
+  const faqRef = useRef<HTMLElement>(null);
   const privacyRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -17,6 +18,8 @@ function App() {
       
       if (privacyRef.current && scrollPosition >= privacyRef.current.offsetTop) {
         setActiveSection('privacy');
+      } else if (faqRef.current && scrollPosition >= faqRef.current.offsetTop) {
+        setActiveSection('faq');
       } else if (supportRef.current && scrollPosition >= supportRef.current.offsetTop) {
         setActiveSection('support');
       } else {
@@ -63,6 +66,16 @@ function App() {
                 }`}
               >
                 Support
+              </button>
+              <button
+                onClick={() => scrollToSection(faqRef)}
+                className={`text-sm font-medium transition-colors ${
+                  activeSection === 'faq' 
+                    ? 'text-[#4F6DF5]' 
+                    : 'text-[#6B7280] hover:text-[#111214]'
+                }`}
+              >
+                FAQ
               </button>
               <button
                 onClick={() => scrollToSection(privacyRef)}
@@ -225,12 +238,69 @@ function App() {
                 Contact
               </h3>
               <a 
-                href="mailto:support@substacker.app"
+                href="mailto:vtguy65@icloud.com"
                 className="inline-flex items-center text-lg font-medium text-[#4F6DF5] hover:text-[#3D5BD9] transition-colors"
               >
                 <Mail className="w-5 h-5 mr-2" />
-                support@substacker.app
+                vtguy65@icloud.com
               </a>
+              <p className="text-base text-[#6B7280] mt-4">
+                Support requests are typically answered within 24 to 48 hours.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section 
+        ref={faqRef}
+        id="faq"
+        className="relative py-24 lg:py-32 bg-white"
+      >
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="max-w-3xl">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-10 h-10 bg-[#4F6DF5]/10 rounded-xl flex items-center justify-center">
+                <HelpCircle className="w-5 h-5 text-[#4F6DF5]" />
+              </div>
+              <span className="text-sm font-semibold text-[#4F6DF5] uppercase tracking-wider">FAQ</span>
+            </div>
+
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111214] tracking-tight mb-12">
+              Frequently Asked Questions
+            </h2>
+
+            <div className="space-y-8">
+              {/* Question 1 */}
+              <div className="space-y-3">
+                <h3 className="text-xl font-bold text-[#111214]">
+                  Does SubStacker connect to my bank?
+                </h3>
+                <p className="text-base text-[#374151] leading-relaxed">
+                  No. SubStacker works without bank connections.
+                </p>
+              </div>
+
+              {/* Question 2 */}
+              <div className="space-y-3">
+                <h3 className="text-xl font-bold text-[#111214]">
+                  Is my data private?
+                </h3>
+                <p className="text-base text-[#374151] leading-relaxed">
+                  Yes. We do not sell or share personal data.
+                </p>
+              </div>
+
+              {/* Question 3 */}
+              <div className="space-y-3">
+                <h3 className="text-xl font-bold text-[#111214]">
+                  Is SubStacker free?
+                </h3>
+                <p className="text-base text-[#374151] leading-relaxed">
+                  Yes. SubStacker is free to download and use.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -240,7 +310,7 @@ function App() {
       <section 
         ref={privacyRef}
         id="privacy"
-        className="relative py-24 lg:py-32 bg-white"
+        className="relative py-24 lg:py-32 bg-[#F6F7F9]"
       >
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl">
@@ -258,6 +328,12 @@ function App() {
             <p className="text-sm text-[#9CA3AF] mb-8">
               Last updated: February 7, 2026
             </p>
+
+            <div className="p-6 bg-[#B9F6D4]/20 rounded-2xl border-2 border-[#B9F6D4] mb-8">
+              <p className="text-lg font-semibold text-[#111214] leading-relaxed">
+                Your data is private. SubStacker does not sell or share your personal information.
+              </p>
+            </div>
 
             <div className="space-y-8 text-[#374151]">
               <p className="text-base leading-relaxed">
@@ -425,6 +501,12 @@ function App() {
                 className="text-sm text-[#9CA3AF] hover:text-white transition-colors"
               >
                 Support
+              </button>
+              <button
+                onClick={() => scrollToSection(faqRef)}
+                className="text-sm text-[#9CA3AF] hover:text-white transition-colors"
+              >
+                FAQ
               </button>
               <button
                 onClick={() => scrollToSection(privacyRef)}
